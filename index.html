@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="slack.css" />
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <header>
+      <h2 data-testid="test-user-name">ÎæmCherry</h2>
+    </header>
+
+    <figure class="avatar-section">
+      <img
+        src="Cherry/images/a0f36bfabfab9037827f6a31fd741a1a.jpg"
+        alt="ÎæmCherry's avatar"
+        data-testid="test-user-avatar"
+      />
+    </figure>
+
+    <p data-testid="test-user-bio">
+      A passionate frontend developer who loves crafting beautiful and functional user experiences.
+    </p>
+
+    <p data-testid="test-user-time" id="user-time"></p>
+
+    <nav data-testid="test-user-social-links" class="social-links">
+      <ul>
+        <li><a href="https://x.com/cherry_ihuoma?t=9ObQjPS01jyZrM9MQ0odew&s=08" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-X">x</a></li>
+        <li><a href="https://github.com/cherryihuoma" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/cherry-ihuoma-608719310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+      </ul>
+    </nav>
+
+    <section data-testid="test-user-hobbies" class="hobbies">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Reading</li>
+        <li>Designing</li>
+        <li>Coding</li>
+      </ul>
+    </section>
+
+    <section data-testid="test-user-dislikes" class="dislikes">
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Procrastination</li>
+        <li>Noise</li>
+        <li>Slow Wi-Fi</li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="slack.js"></script>
+</body>
+</html>
