@@ -1,35 +1,60 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: teal;
+  background: linear-gradient(120deg, #ffb6c1, #ffe4e1, #f5d0fe, #c7d2fe);
+  background-size: 300% 300%;
   display: flex;
   justify-content: center;
+  animation: gradientShift 10s ease infinite;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
 .profile-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
   max-width: 350px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
 .profile-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.04);
+  box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .avatar-section img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  border: 4px solid #f9a8d4;
+  transition: transform 0.8s ease, box-shadow 0.5s ease;
   object-fit: cover;
   margin-bottom: 1rem;
 }
-
+#about{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#about p{
+  font-style: italic;
+}
 .social-links ul {
   list-style: none;
   padding: 0;
@@ -40,13 +65,12 @@ body {
 
 .social-links a {
   text-decoration: none;
-  color: #0077ff;
-  font-weight: 500;
+  color: #3eb489;
+  font-weight: 600;
 }
 
-.social-links a:focus {
-  outline: 2px solid #0077ff;
-  outline-offset: 2px;
+.social-links a:hover {
+  color: #4a4a4a;
 }
 
 section {
@@ -54,21 +78,159 @@ section {
   text-align: left;
 }
 
-@media (min-width: 700px) {
-  .profile-card {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 600px;
-    text-align: left;
-  }
+section ul {
+  list-style: none;
+  font-family: cursive;
+}
 
-  .avatar-section {
-    flex-shrink: 0;
-  }
+.contact {
+  padding: 80px 20px;
+  width: 80%;
+  text-align: center;
+}
 
-  .avatar-section img {
-    width: 150px;
-    height: 150px;
-  }
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #7c1165;
+}
+
+.contact form {
+  margin: auto;
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: inset 0 0 5px #7c1165;
+  color: #8f3535;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff2fa6, #6d28d9);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #a9156e;
+}
+
+@media (min-width: 700px) {}
+
+@keyframes gradientShift{
+  0%{background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+h1 {
+  text-align: center;
+  
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff6da9;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #a50d4c;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e05798;
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.success {
+  text-align: center;
+  color: #2a9d8f;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #ffe4ec, #c8e9ff);
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ff6da9;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: #9a00b1;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
 }
