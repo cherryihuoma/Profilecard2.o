@@ -141,6 +141,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top left, #ffe4ec, #c8e9ff);
+animation: gradientShift 10s ease infinite;
 }
 
 h1 {
