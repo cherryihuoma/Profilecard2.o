@@ -199,13 +199,6 @@ button:hover {
   font-weight: 600;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top left, #ffe4ec, #c8e9ff);
-}
-
 .about-container {
   max-width: 700px;
   margin: 3rem auto;
