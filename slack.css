@@ -136,6 +136,12 @@ section ul {
   100% {background-position: 0% 50%;}
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #ffe4ec, #c8e9ff);
+}
 
 h1 {
   text-align: center;
